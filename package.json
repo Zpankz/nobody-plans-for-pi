@@ -1,0 +1,17 @@
+{
+  "name": "nobody-plans-for-pi",
+  "version": "0.1.0",
+  "description": "Self-improving development workflows for the pi coding agent. Subagent orchestration, structured planning, TDD enforcement, and systematic debugging — adapted from obra/superpowers.",
+  "keywords": ["pi-package"],
+  "license": "MIT",
+  "author": "HashWarlock",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HashWarlock/nobody-plans-for-pi"
+  },
+  "pi": {
+    "extensions": ["extensions"],
+    "skills": ["skills"],
+    "prompts": ["prompts"]
+  }
+}
