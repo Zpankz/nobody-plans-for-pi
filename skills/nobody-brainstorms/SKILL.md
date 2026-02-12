@@ -1,6 +1,6 @@
 ---
 name: nobody-brainstorms
-description: Use before any creative work — creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
+description: Use when doing any creative work — creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
 ---
 
 # Brainstorming Ideas Into Designs
