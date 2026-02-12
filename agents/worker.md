@@ -6,8 +6,6 @@ model: claude-sonnet-4-5
 # Model selection: worker needs CODING ABILITY + TOOL USE.
 # This is your primary implementation model — balance quality with cost.
 #
-# Local: strong coding model (qwen-2.5-coder-32b, deepseek-coder-v2)
-#
 # What matters: code quality, test writing, following plans precisely.
 # What doesn't: being the absolute smartest — plans tell it what to do.
 ---

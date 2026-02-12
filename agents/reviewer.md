@@ -7,8 +7,6 @@ model: claude-sonnet-4-5
 # Model selection: reviewer needs ATTENTION TO DETAIL + SECURITY AWARENESS.
 # Use your strongest available reasoning model — this is the quality gate.
 #
-# Local: strongest available (llama-3.1-70b, qwen-2.5-72b)
-#
 # What matters: finding bugs, security issues, logic errors, edge cases.
 # What doesn't: speed (reviews are done once per batch).
 ---

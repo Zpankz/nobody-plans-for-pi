@@ -52,14 +52,14 @@ Each agent has a recommended model **role**, not a hardcoded model. Swap freely 
 
 #### Choosing Models
 
-The defaults use Anthropic models, but any provider works. Pick models that match the **role**:
+Connect your preferred provider through pi's setup — API key, Codex, Claude Code, Antigravity, or any supported backend. Then pick models that match each agent's **role**:
 
-| Agent | Need | Local |
-|-------|------|-------|
-| **scout** | Speed — fast response, good at grep/find/read, structured output | ~8B models (llama-3.1-8b, qwen-2.5-7b) |
-| **planner** | Reasoning — structured plans, step-by-step logic, TDD awareness | ~30B+ models (qwen-2.5-32b, llama-3.1-70b) |
-| **reviewer** | Quality gate — finding bugs, security issues, edge cases | Strongest available (llama-3.1-70b, qwen-2.5-72b) |
-| **worker** | Coding ability — code quality, test writing, following plans | Coding models (qwen-2.5-coder-32b, deepseek-coder-v2) |
+| Agent | What to optimize for |
+|-------|---------------------|
+| **scout** | **Speed** — fastest available model; needs to be good at grep/find/read and structured output, not deep reasoning |
+| **planner** | **Reasoning** — mid-to-high tier; must produce well-organized step-by-step plans with TDD awareness |
+| **reviewer** | **Quality gate** — strongest available reasoning model; this is where you catch bugs, security issues, and edge cases |
+| **worker** | **Coding ability** — strong code generation with good tool use; balance quality with cost since this runs most often |
 
 > **Rule of thumb:** Scout should be your fastest model. Reviewer should be your strongest. Worker and planner are your best balance of quality and cost.
 
