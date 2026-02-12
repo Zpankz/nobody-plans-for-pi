@@ -1,9 +1,9 @@
 ---
-name: using-nobody-plans
+name: using-plans-for-nobody
 description: Use when starting any conversation — establishes how to find and use skills, requiring skill loading before any response including clarifying questions
 ---
 
-# Using Nobody Plans
+# Using Plans for Nobody
 
 If there is even a 1% chance a skill might apply to what you are doing, you MUST load and follow the skill.
 
@@ -23,8 +23,8 @@ In pi, use `/skill:name` to load a skill. Skill descriptions are in the system p
 
 ## Skill Priority
 
-1. **Process skills first** (brainstorming, debugging) — determines HOW to approach
-2. **Implementation skills second** (TDD, plans) — guides execution
+1. **Process skills first** (nobody-brainstorms, nobody-debugs) — determines HOW to approach
+2. **Implementation skills second** (nobody-uses-tdd, nobody-writes-plans) — guides execution
 
 ## Red Flags — You're Rationalizing
 

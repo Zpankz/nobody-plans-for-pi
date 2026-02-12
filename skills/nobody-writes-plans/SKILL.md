@@ -1,5 +1,5 @@
 ---
-name: writing-plans
+name: nobody-writes-plans
 description: Use when you have a spec or requirements for a multi-step task, before touching code
 ---
 
@@ -9,7 +9,7 @@ description: Use when you have a spec or requirements for a multi-step task, bef
 
 Write comprehensive implementation plans assuming the engineer has zero codebase context and questionable taste. Document everything: which files to touch, complete code, testing, how to verify. Bite-sized tasks. DRY. YAGNI. TDD. Frequent commits.
 
-**Announce at start:** "I'm using the writing-plans skill to create the implementation plan."
+**Announce at start:** "I'm using the nobody-writes-plans skill to create the implementation plan."
 
 **Save plans to:** `docs/plans/YYYY-MM-DD-<feature-name>.md`
 
@@ -84,4 +84,4 @@ git commit -m "feat: add specific feature"
 After saving the plan, offer:
 
 1. **Subagent-driven** (this session) — `/implement <feature>` dispatches scout → planner → worker
-2. **Manual execution** — use the executing-plans skill in a new session
+2. **Manual execution** — use the nobody-executes-plans skill in a new session

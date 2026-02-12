@@ -1,5 +1,5 @@
 ---
-name: receiving-code-review
+name: nobody-receives-code-review
 description: Use when receiving code review feedback, before implementing suggestions — requires technical rigor and verification, not performative agreement
 ---
 

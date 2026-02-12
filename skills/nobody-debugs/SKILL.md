@@ -1,5 +1,5 @@
 ---
-name: systematic-debugging
+name: nobody-debugs
 description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 ---
 
@@ -11,7 +11,7 @@ description: Use when encountering any bug, test failure, or unexpected behavior
 
 **Core principle:** Random fixes waste hours. Systematic tracing takes minutes.
 
-**Announce at start:** "I'm using the systematic-debugging skill to trace this."
+**Announce at start:** "I'm using the nobody-debugs skill to trace this."
 
 ## Phase 1: Reproduce
 

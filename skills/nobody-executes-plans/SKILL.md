@@ -1,5 +1,5 @@
 ---
-name: executing-plans
+name: nobody-executes-plans
 description: Use when you have a written implementation plan to execute with review checkpoints
 ---
 
@@ -9,7 +9,7 @@ description: Use when you have a written implementation plan to execute with rev
 
 Execute implementation plans in batches with human checkpoints. Each batch is a logical group of tasks that can be reviewed together.
 
-**Announce at start:** "I'm using the executing-plans skill to work through the plan."
+**Announce at start:** "I'm using the nobody-executes-plans skill to work through the plan."
 
 ## Process
 

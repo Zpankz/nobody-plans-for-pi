@@ -1,5 +1,5 @@
 ---
-name: finishing-a-development-branch
+name: nobody-finishes-a-development-branch
 description: Use when implementation is complete and all tests pass — guides completion by presenting structured options for merge, PR, or cleanup
 ---
 
@@ -9,7 +9,7 @@ description: Use when implementation is complete and all tests pass — guides c
 
 When work is complete on a branch, follow a structured process to decide how to integrate and clean up.
 
-**Announce at start:** "I'm using the finishing-a-development-branch skill to wrap this up."
+**Announce at start:** "I'm using the nobody-finishes-a-development-branch skill to wrap this up."
 
 ## Pre-Completion Checklist
 

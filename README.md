@@ -41,12 +41,42 @@ The `subagent` tool lets the agent spawn isolated pi processes for focused work:
 
 ### Agents
 
-| Agent | Model | Tools | Purpose |
-|-------|-------|-------|---------|
-| `scout` | Haiku | read, grep, find, ls, bash | Fast codebase recon, compressed context handoff |
-| `planner` | Sonnet | read, grep, find, ls | Implementation plans from context + requirements |
-| `reviewer` | Sonnet | read, grep, find, ls, bash | Code review for quality and security |
-| `worker` | Sonnet | all | General-purpose implementation |
+Each agent has a recommended model **role**, not a hardcoded model. Swap freely based on your provider.
+
+| Agent | Default Model | Role | What Matters |
+|-------|---------------|------|--------------|
+| `scout` | claude-haiku-4-5 | **Fast recon** | Speed, structured output, good at grep/find |
+| `planner` | claude-sonnet-4-5 | **Reasoning** | Structured plans, step-by-step logic, TDD awareness |
+| `reviewer` | claude-sonnet-4-5 | **Quality gate** | Finding bugs, security issues, edge cases |
+| `worker` | claude-sonnet-4-5 | **Implementation** | Code quality, test writing, following plans precisely |
+
+#### Choosing Models by Provider
+
+The defaults use Anthropic models, but any provider works. Pick models that match the **role**:
+
+| Role | Anthropic | OpenAI | Google | DeepSeek | Local |
+|------|-----------|--------|--------|----------|-------|
+| **Fast** (scout) | claude-haiku-4-5 | gpt-4.1-mini | gemini-2.5-flash | deepseek-chat | llama-3.1-8b, qwen-2.5-7b |
+| **Reasoning** (planner) | claude-sonnet-4-5 | gpt-4.1 | gemini-2.5-pro | deepseek-reasoner | qwen-2.5-32b, llama-3.1-70b |
+| **Quality** (reviewer) | claude-sonnet-4-5 | gpt-4.1 | gemini-2.5-pro | deepseek-reasoner | qwen-2.5-72b |
+| **Coding** (worker) | claude-sonnet-4-5 | gpt-4.1 | gemini-2.5-pro | deepseek-chat | qwen-2.5-coder-32b |
+
+> **Rule of thumb:** Scout should be your fastest model. Reviewer should be your strongest. Worker and planner are your best balance of quality and cost.
+
+#### Changing Agent Models
+
+Edit the `model:` field in the agent definition files. After installing, they live at:
+
+- **Global:** `~/.pi/agent/git/github.com/HashWarlock/nobody-plans-for-pi/agents/*.md`
+- **Or override per-project:** copy to `.pi/agents/` and edit
+
+```yaml
+# Example: switch scout to GPT-4.1-mini
+---
+name: scout
+model: gpt-4.1-mini
+---
+```
 
 ### Workflow Prompts
 
@@ -62,31 +92,31 @@ The `subagent` tool lets the agent spawn isolated pi processes for focused work:
 
 | Skill | Trigger |
 |-------|---------|
-| `brainstorming` | Before any creative/design work |
-| `writing-plans` | When you have specs, before coding |
-| `executing-plans` | When executing a written plan |
-| `test-driven-development` | Before writing any implementation code |
-| `systematic-debugging` | Any bug, test failure, or unexpected behavior |
-| `verification-before-completion` | Before claiming work is done |
-| `requesting-code-review` | Before merging or declaring complete |
-| `receiving-code-review` | When processing review feedback |
-| `using-git-worktrees` | Starting feature work needing isolation |
-| `finishing-a-development-branch` | When tasks are complete, deciding how to integrate |
-| `writing-skills` | Creating or editing skills |
-| `using-nobody-plans` | Every conversation (establishes skill discipline) |
+| `nobody-brainstorms` | Before any creative/design work |
+| `nobody-writes-plans` | When you have specs, before coding |
+| `nobody-executes-plans` | When executing a written plan |
+| `nobody-uses-tdd` | Before writing any implementation code |
+| `nobody-debugs` | Any bug, test failure, or unexpected behavior |
+| `nobody-verifies-before-completion` | Before claiming work is done |
+| `nobody-requests-code-review` | Before merging or declaring complete |
+| `nobody-receives-code-review` | When processing review feedback |
+| `nobody-uses-git-worktrees` | Starting feature work needing isolation |
+| `nobody-finishes-a-development-branch` | When tasks are complete, deciding how to integrate |
+| `nobody-writes-skills` | Creating or editing skills |
+| `using-plans-for-nobody` | Every conversation (establishes skill discipline) |
 
 ## Usage
 
 ### Automatic
 
-Skills activate when the agent recognizes a matching task. The `using-nobody-plans` skill establishes discipline to check for relevant skills before acting.
+Skills activate when the agent recognizes a matching task. The `using-plans-for-nobody` skill establishes discipline to check for relevant skills before acting.
 
 ### Explicit
 
 ```
-/skill:brainstorming help me design a caching layer
-/skill:systematic-debugging tests are failing intermittently
-/skill:test-driven-development
+/skill:nobody-brainstorms help me design a caching layer
+/skill:nobody-debugs tests are failing intermittently
+/skill:nobody-uses-tdd
 
 /implement add Redis session caching
 /scout-and-plan refactor the auth module

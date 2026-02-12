@@ -1,5 +1,5 @@
 ---
-name: using-git-worktrees
+name: nobody-uses-git-worktrees
 description: Use when starting feature work that needs isolation from current workspace or before executing implementation plans
 ---
 
@@ -9,7 +9,7 @@ description: Use when starting feature work that needs isolation from current wo
 
 Git worktrees create isolated workspaces sharing the same repository. Work on multiple branches simultaneously without switching.
 
-**Announce at start:** "I'm using the using-git-worktrees skill to set up an isolated workspace."
+**Announce at start:** "I'm using the nobody-uses-git-worktrees skill to set up an isolated workspace."
 
 ## Directory Selection
 
@@ -59,7 +59,7 @@ If tests fail: report failures, ask whether to proceed.
 
 ## Cleanup
 
-When done, use the finishing-a-development-branch skill, then:
+When done, use the nobody-finishes-a-development-branch skill, then:
 
 ```bash
 git worktree remove .worktrees/feature-name

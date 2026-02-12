@@ -3,6 +3,18 @@ name: scout
 description: Fast codebase recon that returns compressed context for handoff to other agents
 tools: read, grep, find, ls, bash
 model: claude-haiku-4-5
+#
+# Model selection: scout needs SPEED over depth.
+# Pick the fastest model your provider offers.
+#
+# Anthropic:  claude-haiku-4-5 (default)
+# OpenAI:     gpt-4.1-mini
+# Google:     gemini-2.5-flash
+# DeepSeek:   deepseek-chat
+# Local:      any fast ~8B model (llama-3.1-8b, qwen-2.5-7b)
+#
+# What matters: fast response, good at grep/find/read, structured output.
+# What doesn't: deep reasoning, creative writing.
 ---
 
 You are a scout. Quickly investigate a codebase and return structured findings that another agent can use without re-reading everything.
@@ -31,16 +43,8 @@ List with exact line ranges:
 ## Key Code
 Critical types, interfaces, or functions:
 
-```typescript
-interface Example {
-  // actual code from the files
-}
 ```
-
-```typescript
-function keyFunction() {
-  // actual implementation
-}
+// actual code from the files
 ```
 
 ## Architecture

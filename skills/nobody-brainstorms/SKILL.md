@@ -1,5 +1,5 @@
 ---
-name: brainstorming
+name: nobody-brainstorms
 description: Use before any creative work — creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
 ---
 
@@ -9,7 +9,7 @@ description: Use before any creative work — creating features, building compon
 
 Turn ideas into fully formed designs through collaborative dialogue before writing code.
 
-**Announce at start:** "I'm using the brainstorming skill to explore this before we build."
+**Announce at start:** "I'm using the nobody-brainstorms skill to explore this before we build."
 
 ## The Process
 
@@ -38,9 +38,9 @@ Turn ideas into fully formed designs through collaborative dialogue before writi
 ## After Design Approval
 
 Offer next steps:
-1. **Write plan** — use the writing-plans skill
+1. **Write plan** — use the nobody-writes-plans skill
 2. **Implement directly** — use `/implement <feature>`
-3. **Set up isolated workspace** — use the using-git-worktrees skill
+3. **Set up isolated workspace** — use the nobody-uses-git-worktrees skill
 
 ## Red Flags
 
