@@ -7,11 +7,7 @@ model: claude-haiku-4-5
 # Model selection: scout needs SPEED over depth.
 # Pick the fastest model your provider offers.
 #
-# Anthropic:  claude-haiku-4-5 (default)
-# OpenAI:     gpt-4.1-mini
-# Google:     gemini-2.5-flash
-# DeepSeek:   deepseek-chat
-# Local:      any fast ~8B model (llama-3.1-8b, qwen-2.5-7b)
+# Local: any fast ~8B model (llama-3.1-8b, qwen-2.5-7b)
 #
 # What matters: fast response, good at grep/find/read, structured output.
 # What doesn't: deep reasoning, creative writing.

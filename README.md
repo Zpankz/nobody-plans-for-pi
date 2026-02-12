@@ -50,16 +50,16 @@ Each agent has a recommended model **role**, not a hardcoded model. Swap freely 
 | `reviewer` | claude-sonnet-4-5 | **Quality gate** | Finding bugs, security issues, edge cases |
 | `worker` | claude-sonnet-4-5 | **Implementation** | Code quality, test writing, following plans precisely |
 
-#### Choosing Models by Provider
+#### Choosing Models
 
 The defaults use Anthropic models, but any provider works. Pick models that match the **role**:
 
-| Role | Anthropic | OpenAI | Google | DeepSeek | Local |
-|------|-----------|--------|--------|----------|-------|
-| **Fast** (scout) | claude-haiku-4-5 | gpt-4.1-mini | gemini-2.5-flash | deepseek-chat | llama-3.1-8b, qwen-2.5-7b |
-| **Reasoning** (planner) | claude-sonnet-4-5 | gpt-4.1 | gemini-2.5-pro | deepseek-reasoner | qwen-2.5-32b, llama-3.1-70b |
-| **Quality** (reviewer) | claude-sonnet-4-5 | gpt-4.1 | gemini-2.5-pro | deepseek-reasoner | qwen-2.5-72b |
-| **Coding** (worker) | claude-sonnet-4-5 | gpt-4.1 | gemini-2.5-pro | deepseek-chat | qwen-2.5-coder-32b |
+| Agent | Need | Local |
+|-------|------|-------|
+| **scout** | Speed — fast response, good at grep/find/read, structured output | ~8B models (llama-3.1-8b, qwen-2.5-7b) |
+| **planner** | Reasoning — structured plans, step-by-step logic, TDD awareness | ~30B+ models (qwen-2.5-32b, llama-3.1-70b) |
+| **reviewer** | Quality gate — finding bugs, security issues, edge cases | Strongest available (llama-3.1-70b, qwen-2.5-72b) |
+| **worker** | Coding ability — code quality, test writing, following plans | Coding models (qwen-2.5-coder-32b, deepseek-coder-v2) |
 
 > **Rule of thumb:** Scout should be your fastest model. Reviewer should be your strongest. Worker and planner are your best balance of quality and cost.
 

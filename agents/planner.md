@@ -8,11 +8,7 @@ model: claude-sonnet-4-5
 # Pick a strong mid-tier model — doesn't need to be the biggest,
 # but must produce well-organized, detailed plans.
 #
-# Anthropic:  claude-sonnet-4-5 (default)
-# OpenAI:     gpt-4.1
-# Google:     gemini-2.5-pro
-# DeepSeek:   deepseek-reasoner
-# Local:      any strong ~30B+ model (qwen-2.5-32b, llama-3.1-70b)
+# Local: any strong ~30B+ model (qwen-2.5-32b, llama-3.1-70b)
 #
 # What matters: structured output, step-by-step reasoning, TDD awareness.
 # What doesn't: speed (plans are generated once), creative writing.
