@@ -1,6 +1,6 @@
 # nobody-plans-for-pi
 
-Self-improving development workflows for the [pi coding agent](https://github.com/mariozechner/pi-coding-agent). Subagent orchestration, structured planning, TDD enforcement, and systematic debugging.
+Self-improving development workflows for the [pi coding agent](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent). Subagent orchestration, structured planning, TDD enforcement, and systematic debugging.
 
 > **Adapted from [obra/superpowers](https://github.com/obra/superpowers)** by Jesse Vincent — the original structured development workflow system for coding agents. This package reimplements the superpowers methodology as a native pi package, using the pi SDK's subagent architecture and skill/prompt system. Full credit to Jesse for the ideas, methodology, and skill designs that this project builds on.
 
