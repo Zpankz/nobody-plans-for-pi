@@ -3,6 +3,10 @@
 Self-improving development workflows for the [pi coding agent](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent). Subagent orchestration, structured planning, TDD enforcement, and systematic debugging.
 
 > **Adapted from [obra/superpowers](https://github.com/obra/superpowers)** by Jesse Vincent — the original structured development workflow system for coding agents. This package reimplements the superpowers methodology as a native pi package, using the pi SDK's subagent architecture and skill/prompt system. Full credit to Jesse for the ideas, methodology, and skill designs that this project builds on.
+>
+> **Track latest superpowers Pi integration here**:
+> - [Phase 1](https://github.com/obra/superpowers/pull/500)
+> - [Phase 2](https://github.com/sheurich/obra-superpowers/pull/2)
 
 ## What This Does
 
