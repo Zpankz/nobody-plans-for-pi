@@ -49,7 +49,7 @@ Each agent has a recommended model **role**, not a hardcoded model. Swap freely 
 
 | Agent | Default Model | Role | What Matters |
 |-------|---------------|------|--------------|
-| `scout` | claude-haiku-4.6 | **Fast recon** | Speed, structured output, good at grep/find |
+| `scout` | claude-haiku-4.5 | **Fast recon** | Speed, structured output, good at grep/find |
 | `planner` | claude-sonnet-4.6 | **Reasoning** | Structured plans, step-by-step logic, TDD awareness |
 | `reviewer` | claude-opus-4.7 | **Quality gate** | Finding bugs, security issues, edge cases |
 | `worker` | claude-sonnet-4.6 | **Implementation** | Code quality, test writing, following plans precisely |
