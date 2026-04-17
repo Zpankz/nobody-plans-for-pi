@@ -49,10 +49,10 @@ Each agent has a recommended model **role**, not a hardcoded model. Swap freely 
 
 | Agent | Default Model | Role | What Matters |
 |-------|---------------|------|--------------|
-| `scout` | claude-haiku-4-5 | **Fast recon** | Speed, structured output, good at grep/find |
-| `planner` | claude-sonnet-4-5 | **Reasoning** | Structured plans, step-by-step logic, TDD awareness |
-| `reviewer` | claude-sonnet-4-5 | **Quality gate** | Finding bugs, security issues, edge cases |
-| `worker` | claude-sonnet-4-5 | **Implementation** | Code quality, test writing, following plans precisely |
+| `scout` | claude-haiku-4.5 | **Fast recon** | Speed, structured output, good at grep/find |
+| `planner` | claude-sonnet-4.6 | **Reasoning** | Structured plans, step-by-step logic, TDD awareness |
+| `reviewer` | claude-opus-4.7 | **Quality gate** | Finding bugs, security issues, edge cases |
+| `worker` | claude-sonnet-4.6 | **Implementation** | Code quality, test writing, following plans precisely |
 
 #### Choosing Models
 
@@ -75,10 +75,10 @@ Edit the `model:` field in the agent definition files. After installing, they li
 - **Or override per-project:** copy to `.pi/agents/` and edit
 
 ```yaml
-# Example: switch scout to GPT-4.1-mini
+# Example: switch scout to GPT-5.4
 ---
 name: scout
-model: gpt-4.1-mini
+model: gpt-5.4
 ---
 ```
 
@@ -136,7 +136,7 @@ Add your own agents to `~/.pi/agent/agents/` (user-level) or `.pi/agents/` (proj
 name: my-agent
 description: What this agent does
 tools: read, grep, find, ls
-model: claude-sonnet-4-5
+model: claude-sonnet-4.6
 ---
 
 System prompt for the agent.
