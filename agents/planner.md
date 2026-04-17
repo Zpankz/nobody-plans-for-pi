@@ -2,7 +2,7 @@
 name: planner
 description: Creates implementation plans from context and requirements
 tools: read, grep, find, ls
-model: claude-sonnet-4-5
+model: claude-sonnet-4.6
 #
 # Model selection: planner needs REASONING + STRUCTURE.
 # Pick a strong mid-tier model — doesn't need to be the biggest,

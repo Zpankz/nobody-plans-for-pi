@@ -2,7 +2,7 @@
 name: reviewer
 description: Code review specialist for quality and security analysis
 tools: read, grep, find, ls, bash
-model: claude-sonnet-4-5
+model: claude-opus-4.7
 #
 # Model selection: reviewer needs ATTENTION TO DETAIL + SECURITY AWARENESS.
 # Use your strongest available reasoning model — this is the quality gate.

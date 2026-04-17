@@ -1,7 +1,7 @@
 ---
 name: worker
 description: General-purpose subagent with full capabilities, isolated context
-model: claude-sonnet-4-5
+model: claude-sonnet-4.6
 #
 # Model selection: worker needs CODING ABILITY + TOOL USE.
 # This is your primary implementation model — balance quality with cost.
